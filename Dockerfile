@@ -36,7 +36,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 
 # Copy just the dependency files first, for more efficient layer caching
-COPY pyproject.toml uv.lock ./
+COPY pyproject.toml ./
 RUN mkdir -p src
 
 # Install Python dependencies using UV's lock file
